@@ -1,0 +1,19 @@
+{
+  "name": "brain-games",
+  "version": "1.0.0",
+  "description": "first project",
+  "main": "brain-game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigin/project-lvl1-s304.git"
+  },
+  "author": "vigin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vigin/project-lvl1-s304/issues"
+  },
+  "homepage": "https://github.com/vigin/project-lvl1-s304#readme"
+}
