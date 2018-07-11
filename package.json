@@ -1,6 +1,6 @@
 {
   "name": "prj001-bg",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "first project",
   "main": "index.js",
   "bin": {
@@ -25,10 +25,12 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "readline-sync": "^1.4.9"
+    "babel-preset-stage-0": "^6.24.1"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
 }
