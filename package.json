@@ -1,10 +1,10 @@
 {
   "name": "prj001-bg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "first project",
-  "main": "brain-game.js",
+  "main": "index.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/index.js"
   },
   "scripts": {
     "babel-node": "babel-node",
@@ -25,7 +25,8 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "readline-sync": "^1.4.9"
   },
   "files": [
     "dist"
