@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import askquestion from '..';
+import { playCheckpoint2 } from '..';
 
-console.log('Welcome to the Brain Games!');
-
-askquestion();
+// да начнется игра спроси имя
+playCheckpoint2();

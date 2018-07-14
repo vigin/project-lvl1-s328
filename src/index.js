@@ -6,8 +6,23 @@ const attemptsCount = 3;
 const minNumber = 1;
 const maxNumber = 20;
 
+// приглашение 1
+const getIntro1 = () => {
+  // приглашение в игру
+  console.log('Welcome to the Brain Games!');
+};
+
+// приглашение 2 = 1 + правила
+const getIntro2 = () => {
+  // приглашение в игру
+  getIntro1();
+
+  // объяснение правил
+  console.log('Answer "yes" if number even otherwise answer "no".');
+};
+
 // задает вопрос и выводит ответ
-export const askQuestion = () => {
+const askQuestion = () => {
   gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
 };
@@ -19,7 +34,7 @@ const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + mi
 const getNumber = () => getRandom(minNumber, maxNumber);
 
 // игра - один кон
-export const playParityGame = (win) => {
+const playParityGame = (win) => {
   const Number = getNumber();
 
   // вопрос-ответ
@@ -44,4 +59,23 @@ export const playParityGame = (win) => {
   return playParityGame(win + attempt);
 };
 
-export default askQuestion;
+export const playCheckpoint2 = () => {
+  // приглашение в игру 1 сценарий
+  getIntro1();
+
+  // получить имя игрока
+  askQuestion();
+};
+
+export const playCheckpoint4 = () => {
+  // приглашение в игру 2 сценарий
+  getIntro2();
+
+  // получить имя игрока
+  askQuestion();
+
+  // да начнется игра
+  playParityGame(0);
+};
+
+export default playCheckpoint2;

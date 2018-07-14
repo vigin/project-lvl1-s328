@@ -1,6 +1,6 @@
 {
   "name": "prj001-bg",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "first project",
   "main": "brain-even.js",
   "bin": {
