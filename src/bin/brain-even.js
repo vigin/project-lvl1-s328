@@ -1,15 +1,14 @@
 #!/usr/bin/env node
-import {askquestion, paritygame} from '..';
+import { askQuestion, playParityGame } from '..';
 
-//приглашение в игру
+// приглашение в игру
 console.log('Welcome to the Brain Games!');
 
-//объяснение правил
+// объяснение правил
 console.log('Answer "yes" if number even otherwise answer "no".');
 
-//получить имя игрока
-askquestion();
+// получить имя игрока
+askQuestion();
 
-//да начнется игра
-paritygame(0);
-
+// да начнется игра
+playParityGame(0);
