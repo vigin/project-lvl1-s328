@@ -3,18 +3,27 @@ import readlineSync from 'readline-sync';
 
 let gamerName = 'XXXX';
 const cnt_of_attempt = 3; 
+const min_chislo = 1;
+const max_chislo = 20;
 
 //задает вопрос и выводит ответ
 export const askquestion = () => {
   gamerName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${gamerName}!!`);
+  console.log(`Hello, ${gamerName}!`);
 };
+
+//возвращает случайное число от min до max
+function selfRandom(min, max)
+{
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 //возвращает случайное число
 const getnum = () => {
-  return 16;
+  return selfRandom(min_chislo, max_chislo);
 };
 
+//игра - один кон
 export const paritygame = (win) => {
   const chislo = getnum();
 
