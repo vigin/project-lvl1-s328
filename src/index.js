@@ -5,20 +5,20 @@ let gamerName = 'XXXX';
 const attemptsCount = 3;
 const minNumber = 1;
 const maxNumber = 20;
+const textIntro = 'Welcome to the Brain Games!';
 
-// приглашение 1
-const getIntro1 = () => {
+// приглашение + правила
+const getIntro = (text) => {
   // приглашение в игру
-  console.log('Welcome to the Brain Games!');
-};
-
-// приглашение 2 = 1 + правила
-const getIntro2 = () => {
-  // приглашение в игру
-  getIntro1();
+  console.log(textIntro);
 
   // объяснение правил
-  console.log('Answer "yes" if number even otherwise answer "no".');
+  if (typeof text !== 'undefined') {
+    console.log(text);
+  }
+
+  // пустая строка
+  console.log();
 };
 
 // задает вопрос и выводит ответ
@@ -43,10 +43,13 @@ const playParityGame = (win) => {
   // проверка числа
   const attempt = ((Number % 2 === 0 && answer === 'yes')
                 || (Number % 2 === 1 && answer === 'no')) ? 1 : 0;
+  // правильный ответ
+  const answerCorrect = (Number % 2 === 0) ? 'yes' : 'no';
 
   if (attempt === 1) {
     console.log('Correct!');
   } else {
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answerCorrect}'.`);
     console.log(`Let's try again, ${gamerName}!`);
   }
 
@@ -61,7 +64,7 @@ const playParityGame = (win) => {
 
 export const playCheckpoint2 = () => {
   // приглашение в игру 1 сценарий
-  getIntro1();
+  getIntro();
 
   // получить имя игрока
   askQuestion();
@@ -69,13 +72,24 @@ export const playCheckpoint2 = () => {
 
 export const playCheckpoint4 = () => {
   // приглашение в игру 2 сценарий
-  getIntro2();
+  getIntro('Answer "yes" if number even otherwise answer "no".');
 
   // получить имя игрока
   askQuestion();
 
   // да начнется игра
   playParityGame(0);
+};
+
+export const playCheckpoint5 = () => {
+  // приглашение в игру 3 сценарий
+  getIntro('What is the result of the expression?');
+
+  // получить имя игрока
+  askQuestion();
+
+  // да начнется игра
+//  playParityGame(0);
 };
 
 export default playCheckpoint2;
