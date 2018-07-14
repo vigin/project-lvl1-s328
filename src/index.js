@@ -11,12 +11,12 @@ const textIntro = 'Welcome to the Brain Games!';
 const getIntro = (text) => {
   // приглашение в игру
   console.log(textIntro);
-  
+
   // объяснение правил
-  if (typeof text !== "undefined") {
+  if (typeof text !== 'undefined') {
     console.log(text);
-  };
-  
+  }
+
   // пустая строка
   console.log();
 };
@@ -44,11 +44,11 @@ const playParityGame = (win) => {
   const attempt = ((Number % 2 === 0 && answer === 'yes')
                 || (Number % 2 === 1 && answer === 'no')) ? 1 : 0;
   // правильный ответ
-  const answerCorrect = (Number % 2 === 0) ? 'yes' : 'no'; 
+  const answerCorrect = (Number % 2 === 0) ? 'yes' : 'no';
 
   if (attempt === 1) {
     console.log('Correct!');
-  } else {	
+  } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answerCorrect}'.`);
     console.log(`Let's try again, ${gamerName}!`);
   }
