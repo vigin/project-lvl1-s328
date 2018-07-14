@@ -2,9 +2,9 @@
   "name": "prj001-bg",
   "version": "1.0.2",
   "description": "first project",
-  "main": "index.js",
+  "main": "brain-games.js",
   "bin": {
-    "brain-games": "dist/bin/index.js"
+    "brain-games": "dist/bin/brain-games.js"
   },
   "scripts": {
     "babel-node": "babel-node",
