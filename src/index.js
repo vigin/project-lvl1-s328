@@ -51,6 +51,8 @@ const playParityGame = (win) => {
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answerCorrect}'.`);
     console.log(`Let's try again, ${gamerName}!`);
+    // одна неверная попытка,завершаем игру
+    return win;
   }
 
   // проверка попыток
