@@ -1,6 +1,6 @@
 {
   "name": "prj001-bg",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "first project",
   "main": "brain-calc.js",
   "bin": {
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vigin/project-lvl1-s304.git"
+    "url": "git+https://github.com/vigin/project-lvl1-s316.git"
   },
   "author": "vigin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vigin/project-lvl1-s304/issues"
+    "url": "https://github.com/vigin/project-lvl1-s316/issues"
   },
-  "homepage": "https://github.com/vigin/project-lvl1-s304#readme",
+  "homepage": "https://github.com/vigin/project-lvl1-s316#readme",
   "dependencies": {
     "readline-sync": "^1.4.9"
   },
