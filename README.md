@@ -1,9 +1,9 @@
 # project-lvl1-s304
 
 ## Project status
-[![Maintainability](https://api.codeclimate.com/v1/badges/20b55e5f44674c5d6ab6/maintainability)](https://codeclimate.com/github/vigin/project-lvl1-s304/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/20b55e5f44674c5d6ab6/test_coverage)](https://codeclimate.com/github/vigin/project-lvl1-s304/test_coverage)
-[![Build Status](https://travis-ci.org/vigin/project-lvl1-s304.svg?branch=master)](https://travis-ci.org/vigin/project-lvl1-s304)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a0c228618fdb47c5e8ab/maintainability)](https://codeclimate.com/github/vigin/project-lvl1-s316/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a0c228618fdb47c5e8ab/test_coverage)](https://codeclimate.com/github/vigin/project-lvl1-s316/test_coverage)
+[![Build Status](https://travis-ci.org/vigin/project-lvl1-s316.svg?branch=master)](https://travis-ci.org/vigin/project-lvl1-s316)
 
 ## Setup
 
