@@ -1,6 +1,6 @@
 {
   "name": "prj001-bg",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "first project",
   "main": "brain-calc.js",
   "bin": {
