@@ -23,7 +23,6 @@ export const playCalcGame = () => {
   // приглашение в игру
   getIntro();
   console.log('What is the result of the expression?');
-
   // пустая строка
   console.log();
 

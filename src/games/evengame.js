@@ -9,7 +9,6 @@ export const playEvenGame = () => {
   // приглашение в игру
   getIntro();
   console.log('Answer "yes" if number even otherwise answer "no".');
-
   // пустая строка
   console.log();
 

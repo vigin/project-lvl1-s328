@@ -23,7 +23,6 @@ export const playGcdGame = () => {
   // приглашение в игру
   getIntro();
   console.log('Find the greatest common divisor of given numbers.');
-
   // пустая строка
   console.log();
 
