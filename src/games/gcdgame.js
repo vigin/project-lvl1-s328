@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import getRandom from './common';
+import { getRandom } from './common';
 
 // возвращает случайное число от 1 до 30
 const getNumber = () => getRandom(1, 30);
