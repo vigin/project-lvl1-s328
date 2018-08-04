@@ -2,7 +2,6 @@
   "name": "prj001-bg",
   "version": "1.0.11",
   "description": "first project",
-  "main": "brain-calc.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
@@ -18,6 +17,12 @@
     "type": "git",
     "url": "git+https://github.com/vigin/project-lvl1-s316.git"
   },
+  "keywords": [
+    "js",
+    "lint",
+    "learn",
+    "es6"
+  ],
   "author": "vigin",
   "license": "ISC",
   "bugs": {
