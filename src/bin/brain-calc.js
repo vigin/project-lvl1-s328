@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { playEvenGame } from '..';
+import { playCalcGame } from '..';
 
 // игра калькулятор
-playEvenGame();
+playCalcGame();
