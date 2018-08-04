@@ -1,11 +1,10 @@
 {
   "name": "prj001-bg",
-  "version": "1.0.11",
+  "version": "1.0.14",
   "description": "first project",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js"
+    "brain-even": "dist/bin/brain-even.js"
   },
   "scripts": {
     "babel-node": "babel-node",

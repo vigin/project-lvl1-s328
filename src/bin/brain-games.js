@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { playIntroGame } from '..';
+import { playFirstGame } from '..';
 
-// да начнется игра спроси имя
-playIntroGame();
+playFirstGame();
