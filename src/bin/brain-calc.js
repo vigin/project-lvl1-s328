@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { playCheckpoint5 } from '..';
+import { playEvenGame } from '..';
 
-// да начнется игра калькулятор
-playCheckpoint5();
+// игра калькулятор
+playEvenGame();

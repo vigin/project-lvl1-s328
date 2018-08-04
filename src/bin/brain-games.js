@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { playCheckpoint2 } from '..';
+import { playIntroGame } from '..';
 
 // да начнется игра спроси имя
-playCheckpoint2();
+playIntroGame();

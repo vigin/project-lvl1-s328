@@ -4,8 +4,8 @@ import readlineSync from 'readline-sync';
 let gamerName = 'XXXX';
 let attempt = 0;
 const attemptsCount = 3;
-// const minNumber = 1;
-// const maxNumber = 20;
+const minNumber = 1;
+const maxNumber = 20;
 const textIntro = 'Welcome to the Brain Games!';
 
 // приглашение + правила
@@ -28,6 +28,12 @@ const askPlayerName = () => {
   console.log(`Hello, ${gamerName}!`);
 };
 
+// возвращает случайное число от min до max
+const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+// возвращает случайное число
+const getNumber = () => getRandom(minNumber, maxNumber);
+
 const cons = (a, b, c, d, e) => (message) => {
   switch (message) {
     case 'askQuestion':
@@ -45,12 +51,32 @@ const cons = (a, b, c, d, e) => (message) => {
   }
 };
 
-const f1 = () => 'question?';
-const f2 = () => 'get answer';
-const f3 = () => 'my answer';
-const f4 = () => true;
-const f5 = () => 'correct';
+let Number;
+let Answer;
 
+// askQuestion
+const f1 = () => {
+  Number = getNumber();
+
+  // вопрос-ответ
+  console.log(`Question: ${Number}`);
+};
+
+// setAnswer
+const f2 = () => {
+  Answer = readlineSync.question('Your answer: ');
+};
+
+// getAnswer
+const f3 = () => Answer;
+
+// checkAnswer проверка числа
+const f4 = () => (((Number % 2 === 0 && Answer === 'yes') || (Number % 2 === 1 && Answer === 'no')) ? 1 : 0);
+
+// getCorrectAnswer
+const f5 = () => ((Number % 2 === 0) ? 'yes' : 'no');
+
+// сборка функций для раунда игры
 const round = cons(f1, f2, f3, f4, f5);
 
 const askQuestion = func => func('askQuestion');
@@ -58,13 +84,6 @@ const setAnswer = func => func('setAnswer');
 const getAnswer = func => func('getAnswer');
 const checkAnswer = func => func('checkAnswer');
 const getCorrectAnswer = func => func('getCorrectAnswer');
-
-// возвращает случайное число от min до max
-// const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
-// возвращает случайное число
-// const getNumber = () => getRandom(minNumber, maxNumber);
-
 
 // const checkAnswer1 = () => true;
 
@@ -106,10 +125,10 @@ const playGame = (intro, template, variant) => {
   template(variant);
 };
 
-export const playCheckpoint4 = () => playGame('Answer "yes" if number even otherwise answer "no".', processGame, round);
+export const playEvenGame = () => playGame('Answer "yes" if number even otherwise answer "no".', processGame, round);
 
-export const playCheckpoint5 = () => playGame('What is the result of the expression?', processGame, round);
+export const playCalcGame = () => playGame('What is the result of the expression?', processGame, round);
 
-export const playCheckpoint2 = () => playGame('', () => {}, undefined);
+export const playIntroGame = () => playGame('', () => {}, undefined);
 
-export default playCheckpoint4;
+export default playEvenGame;
