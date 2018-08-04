@@ -53,11 +53,11 @@ const f5 = () => 'correct';
 
 const round = cons(f1, f2, f3, f4, f5);
 
-const askQuestion = (func) => { func('askQuestion'); };
-const setAnswer = (func) => { func('setAnswer'); };
-const getAnswer = (func) => { func('getAnswer'); };
-const checkAnswer = (func) => { func('checkAnswer'); };
-const getCorrectAnswer = (func) => { func('getCorrectAnswer'); };
+const askQuestion = func => func('askQuestion');
+const setAnswer = func => func('setAnswer');
+const getAnswer = func => func('getAnswer');
+const checkAnswer = func => func('checkAnswer');
+const getCorrectAnswer = func => func('getCorrectAnswer');
 
 // возвращает случайное число от min до max
 // const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
