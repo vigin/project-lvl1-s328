@@ -16,12 +16,12 @@ const getCorrectAnswer = (a, b, operation) => {
       return undefined;
   }
 };
+
 export const playCalcGame = () => {
   // приглашение в игру
   getIntro();
   console.log('What is the result of the expression?');
-  // пустая строка
-  console.log();
+  console.log();// пустая строка
   // приветствие + правила
   const gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
@@ -66,4 +66,5 @@ export const playCalcGame = () => {
   // сообщение победителю
   console.log(`Congratulations, ${gamerName}!`);
 };
+
 export default playCalcGame;

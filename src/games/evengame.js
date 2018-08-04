@@ -9,27 +9,20 @@ export const playEvenGame = () => {
   // приглашение в игру
   getIntro();
   console.log('Answer "yes" if number even otherwise answer "no".');
-  // пустая строка
-  console.log();
-
+  console.log();// пустая строка
   // приветствие + правила
   const gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
-
   let attempt = 0;
   let Number;
   let Answer;
-
   // проверка количества правильных попыток
   while (attempt < 3) {
     Number = getNumber();
-
     // задать вопрос
     console.log(`Question: ${Number}`);
-
     // получить ответ
     Answer = readlineSync.question('Your answer: ');
-
     // проверить ответ
     if ((Number % 2 === 0 && Answer === 'yes') || (Number % 2 === 1 && Answer === 'no')) {
       // еще одна правильная попытка
@@ -41,7 +34,6 @@ export const playEvenGame = () => {
       return;
     }
   }
-
   // сообщение победителю
   console.log(`Congratulations, ${gamerName}!`);
 };
