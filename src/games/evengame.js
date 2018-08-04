@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { getRandom } from './common';
+import { getRandom, getIntro } from './common';
 
 // возвращает случайное число от 1 до 20
 const getNumber = () => getRandom(1, 20);
 
 export const playEvenGame = () => {
   // приглашение в игру
-  console.log('Welcome to the Brain Games!');
+  getIntro();
   console.log('Answer "yes" if number even otherwise answer "no".');
 
   // пустая строка

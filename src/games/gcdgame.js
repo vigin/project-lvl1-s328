@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { getRandom } from './common';
+import { getRandom, getIntro } from './common';
 
 // возвращает случайное число от 1 до 30
 const getNumber = () => getRandom(1, 30);
@@ -21,7 +21,7 @@ const getGcd = (a, b) => {
 
 export const playGcdGame = () => {
   // приглашение в игру
-  console.log('Welcome to the Brain Games!');
+  getIntro();
   console.log('Find the greatest common divisor of given numbers.');
 
   // пустая строка

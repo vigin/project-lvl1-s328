@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { getRandom } from './common';
+import { getRandom, getIntro } from './common';
 
 // возвращает случайное число от 1 до 20
 const getNumber = () => getRandom(1, 20);
@@ -21,7 +21,7 @@ const getCorrectAnswer = (a, b, operation) => {
 
 export const playCalcGame = () => {
   // приглашение в игру
-  console.log('Welcome to the Brain Games!');
+  getIntro();
   console.log('What is the result of the expression?');
 
   // пустая строка
