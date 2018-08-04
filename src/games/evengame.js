@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-
-// возвращает случайное число от min до max
-const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+import getRandom from './common';
 
 // возвращает случайное число от 1 до 20
 const getNumber = () => getRandom(1, 20);
