@@ -4,8 +4,8 @@ import readlineSync from 'readline-sync';
 let gamerName = 'XXXX';
 let attempt = 0;
 const attemptsCount = 3;
-const minNumber = 1;
-const maxNumber = 20;
+// const minNumber = 1;
+// const maxNumber = 20;
 const textIntro = 'Welcome to the Brain Games!';
 
 // приглашение + правила
@@ -40,8 +40,10 @@ const cons = (a, b, c, d, e) => (message) => {
       return d;
     case 'getCorrectAnswer':
       return e;
+    default:
+      return undefined;
   }
-}
+};
 
 const f1 = () => 'question?';
 const f2 = () => 'get answer';
@@ -51,52 +53,48 @@ const f5 = () => 'correct';
 
 const round = cons(f1, f2, f3, f4, f5);
 
-const askQuestion = (round) => round('askQuestion');
-const setAnswer = (round) => round('setAnswer');
-const getAnswer = (round) => round('getAnswer');
-const checkAnswer = (round) => round('checkAnswer');
-const getCorrectAnswer = (round) => round('getCorrectAnswer');
+const askQuestion = (func) => { func('askQuestion'); };
+const setAnswer = (func) => { func('setAnswer'); };
+const getAnswer = (func) => { func('getAnswer'); };
+const checkAnswer = (func) => { func('checkAnswer'); };
+const getCorrectAnswer = (func) => { func('getCorrectAnswer'); };
 
 // возвращает случайное число от min до max
-const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+// const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 // возвращает случайное число
-const getNumber = () => getRandom(minNumber, maxNumber);
+// const getNumber = () => getRandom(minNumber, maxNumber);
 
 
-const checkAnswer1 = () => {
-    return true;
-}
+// const checkAnswer1 = () => true;
 
 // шаблон процесса игры
 const processGame = (variantOfGame) => {
+  // проверка количества правильных попыток
+  while (attempt < attemptsCount) {
+    // задать вопрос
+    askQuestion(variantOfGame)();
+    // получить ответ
+    setAnswer(variantOfGame)();
 
-    // проверка количества правильных попыток
-    while (attempt < attemptsCount) {
-        // задать вопрос
-        askQuestion(variantOfGame)();
-        // получить ответ
-        setAnswer(variantOfGame)();
-
-        // проверить ответ
-        if (checkAnswer(variantOfGame)()) {
-            // еще одна правильная попытка
-            attempt++;
-            console.log(`attempt: ${attempt}`);
-        }
-        else {
-            // если неправильная вывести правильный ответ и выйти из игры
-            console.log(`'${getAnswer(variantOfGame)()}' is wrong answer ;(. Correct answer was '${getCorrectAnswer(variantOfGame)()}'.`);
-            console.log(`Let's try again, ${gamerName}!`);
-            return;
-        }
+    // проверить ответ
+    if (checkAnswer(variantOfGame)()) {
+      // еще одна правильная попытка
+      attempt += 1;
+      console.log(`attempt: ${attempt}`);
+    } else {
+    // если неправильная вывести правильный ответ и выйти из игры
+      console.log(`'${getAnswer(variantOfGame)()}' is wrong answer ;(. Correct answer was '${getCorrectAnswer(variantOfGame)()}'.`);
+      console.log(`Let's try again, ${gamerName}!`);
+      return;
     }
+  }
 
-    // сообщение победителю
-    console.log(`Congratulations, ${gamerName}!`);
-}
+  // сообщение победителю
+  console.log(`Congratulations, ${gamerName}!`);
+};
 
-//сценарий полной игры
+// сценарий полной игры
 const playGame = (intro, template, variant) => {
   // приветствие + правила
   getIntro(intro);
