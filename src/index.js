@@ -2,6 +2,7 @@
 import readlineSync from 'readline-sync';
 
 let gamerName = 'XXXX';
+let attempt = 0;
 const attemptsCount = 3;
 const minNumber = 1;
 const maxNumber = 20;
@@ -22,10 +23,39 @@ const getIntro = (text) => {
 };
 
 // задает вопрос и выводит ответ
-const askQuestion = () => {
+const askPlayerName = () => {
   gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
 };
+
+const cons = (a, b, c, d, e) => (message) => {
+  switch (message) {
+    case 'askQuestion':
+      return a;
+    case 'setAnswer':
+      return b;
+    case 'getAnswer':
+      return c;
+    case 'checkAnswer':
+      return d;
+    case 'getCorrectAnswer':
+      return e;
+  }
+}
+
+const f1 = () => 'question?';
+const f2 = () => 'get answer';
+const f3 = () => 'my answer';
+const f4 = () => true;
+const f5 = () => 'correct';
+
+const round = cons(f1, f2, f3, f4, f5);
+
+const askQuestion = (round) => round('askQuestion');
+const setAnswer = (round) => round('setAnswer');
+const getAnswer = (round) => round('getAnswer');
+const checkAnswer = (round) => round('checkAnswer');
+const getCorrectAnswer = (round) => round('getCorrectAnswer');
 
 // возвращает случайное число от min до max
 const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -33,65 +63,55 @@ const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + mi
 // возвращает случайное число
 const getNumber = () => getRandom(minNumber, maxNumber);
 
-// игра - один кон
-const playParityGame = (win) => {
-  const Number = getNumber();
 
-  // вопрос-ответ
-  console.log(`Question: ${Number}`);
-  const answer = readlineSync.question('Your answer: ');
-  // проверка числа
-  const attempt = ((Number % 2 === 0 && answer === 'yes')
-                || (Number % 2 === 1 && answer === 'no')) ? 1 : 0;
-  // правильный ответ
-  const answerCorrect = (Number % 2 === 0) ? 'yes' : 'no';
+const checkAnswer1 = () => {
+    return true;
+}
 
-  if (attempt === 1) {
-    console.log('Correct!');
-  } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answerCorrect}'.`);
-    console.log(`Let's try again, ${gamerName}!`);
-    // одна неверная попытка,завершаем игру
-    return win;
-  }
+// шаблон процесса игры
+const processGame = (variantOfGame) => {
 
-  // проверка попыток
-  if (win + attempt === attemptsCount) {
+    // проверка количества правильных попыток
+    while (attempt < attemptsCount) {
+        // задать вопрос
+        askQuestion(variantOfGame)();
+        // получить ответ
+        setAnswer(variantOfGame)();
+
+        // проверить ответ
+        if (checkAnswer(variantOfGame)()) {
+            // еще одна правильная попытка
+            attempt++;
+            console.log(`attempt: ${attempt}`);
+        }
+        else {
+            // если неправильная вывести правильный ответ и выйти из игры
+            console.log(`'${getAnswer(variantOfGame)()}' is wrong answer ;(. Correct answer was '${getCorrectAnswer(variantOfGame)()}'.`);
+            console.log(`Let's try again, ${gamerName}!`);
+            return;
+        }
+    }
+
+    // сообщение победителю
     console.log(`Congratulations, ${gamerName}!`);
-    return win + attempt;
-  }
-  // рекуссивно вызываем, передаем колво успешных попыток
-  return playParityGame(win + attempt);
-};
+}
 
-export const playCheckpoint2 = () => {
-  // приглашение в игру 1 сценарий
-  getIntro();
+//сценарий полной игры
+const playGame = (intro, template, variant) => {
+  // приветствие + правила
+  getIntro(intro);
 
   // получить имя игрока
-  askQuestion();
+  askPlayerName();
+
+  // процесс игры
+  template(variant);
 };
 
-export const playCheckpoint4 = () => {
-  // приглашение в игру 2 сценарий
-  getIntro('Answer "yes" if number even otherwise answer "no".');
+export const playCheckpoint4 = () => playGame('Answer "yes" if number even otherwise answer "no".', processGame, round);
 
-  // получить имя игрока
-  askQuestion();
+export const playCheckpoint5 = () => playGame('What is the result of the expression?', processGame, round);
 
-  // да начнется игра
-  playParityGame(0);
-};
+export const playCheckpoint2 = () => playGame('', () => {}, undefined);
 
-export const playCheckpoint5 = () => {
-  // приглашение в игру 3 сценарий
-  getIntro('What is the result of the expression?');
-
-  // получить имя игрока
-  askQuestion();
-
-  // да начнется игра
-//  playParityGame(0);
-};
-
-export default playCheckpoint2;
+export default playCheckpoint4;
