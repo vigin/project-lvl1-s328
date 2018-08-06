@@ -1,8 +1,7 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+import { cons } from 'hexlet-pairs';
 import { getRandom } from '../common';
 import { playRoundGame } from '../gametemplate';
-import { cons } from 'hexlet-pairs';
 
 const getNumber = () => getRandom(1, 20);
 
@@ -15,15 +14,15 @@ export const gameData = () => {
   let rightAnswer;
   switch (getRandom(1, 3)) {
     case 1:
-      question =`${Number1} + ${Number2}`;
+      question = `${Number1} + ${Number2}`;
       rightAnswer = Number1 + Number2;
       break;
     case 2:
-      question =`${Number1} - ${Number2}`;
+      question = `${Number1} - ${Number2}`;
       rightAnswer = Number1 - Number2;
       break;
     case 3:
-      question =`${Number1} * ${Number2}`;
+      question = `${Number1} * ${Number2}`;
       rightAnswer = Number1 * Number2;
       break;
     default:
@@ -32,4 +31,3 @@ export const gameData = () => {
 };
 
 export default () => playRoundGame(rules, gameData);
-

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import { getRandom, getIntro } from './common';
 import { car, cdr } from 'hexlet-pairs';
+import readlineSync from 'readline-sync';
+import { getIntro } from './common';
 
 const rounds = 3;
 

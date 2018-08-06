@@ -1,8 +1,7 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+import { cons } from 'hexlet-pairs';
 import { getRandom } from '../common';
 import { playRoundGame } from '../gametemplate';
-import { cons } from 'hexlet-pairs';
 
 const getNumber = () => getRandom(1, 30);
 
@@ -23,7 +22,7 @@ const rules = 'Find the greatest common divisor of given numbers.\n';
 export const gameData = () => {
   const Number1 = getNumber();
   const Number2 = getNumber();
-  const question =`${Number1} ${Number2}`;
+  const question = `${Number1} ${Number2}`;
   const rightAnswer = getGcd(Number1, Number2);
   return cons(question, rightAnswer.toString());
 };
