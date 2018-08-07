@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { cons } from 'hexlet-pairs';
 import getRandomNum from '../common';
 import playRound from '../gametemplate';
