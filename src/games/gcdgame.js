@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 import { cons } from 'hexlet-pairs';
-import { getRandom } from '../common';
-import { playRoundGame } from '../gametemplate';
-
-const getNumber = () => getRandom(1, 30);
+import getRandomNum from '../common';
+import playRound from '../gametemplate';
 
 const getGcd = (a, b) => {
   let r = 0;
@@ -17,14 +15,14 @@ const getGcd = (a, b) => {
   return m;
 };
 
-const rules = 'Find the greatest common divisor of given numbers.\n';
+const description = 'Find the greatest common divisor of given numbers.\n';
 
 export const gameData = () => {
-  const Number1 = getNumber();
-  const Number2 = getNumber();
-  const question = `${Number1} ${Number2}`;
-  const rightAnswer = getGcd(Number1, Number2);
-  return cons(question, rightAnswer.toString());
+  const number1 = getRandomNum(1, 30);
+  const number2 = getRandomNum(1, 30);
+  const question = `${number1} ${number2}`;
+  const rightanswer = getGcd(number1, number2);
+  return cons(question, rightanswer.toString());
 };
 
-export default () => playRoundGame(rules, gameData);
+export default () => playRound(description, gameData);
