@@ -1,6 +1,6 @@
 {
   "name": "prj001-bg",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "first project",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
@@ -10,7 +10,6 @@
     "brain-balance": "dist/bin/brain-balance.js"
   },
   "scripts": {
-    "babel-node": "babel-node",
     "eslint": "eslint",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
