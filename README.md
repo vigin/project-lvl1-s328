@@ -7,13 +7,16 @@
 
 ## asciinema rec
 
-###brain-even
+brain-even
 https://asciinema.org/a/EIfdE6hzn5FJ6ZCRgpforgVnr
-###brain-calc
+
+brain-calc
 https://asciinema.org/a/P1UJKf6qFpwTUfildBjTemWhz
-###brain-gcd
+
+brain-gcd
 https://asciinema.org/a/BV7oHrztDTBEBilVYuaQkhwQv
-###brain-balance
+
+brain-balance
 https://asciinema.org/a/MxzNWf8vVFfE58WBCh9NLcjNP
 
 ## Setup
