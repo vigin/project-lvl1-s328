@@ -1,6 +1,6 @@
 {
   "name": "prj001-bg",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "first project",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vigin/project-lvl1-s316.git"
+    "url": "git+https://github.com/vigin/project-lvl1-s328.git"
   },
   "keywords": [
     "js",
@@ -28,9 +28,9 @@
   "author": "vigin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vigin/project-lvl1-s316/issues"
+    "url": "https://github.com/vigin/project-lvl1-s328/issues"
   },
-  "homepage": "https://github.com/vigin/project-lvl1-s316#readme",
+  "homepage": "https://github.com/vigin/project-lvl1-s328#readme",
   "dependencies": {
     "hexlet-pairs": "^1.0.8",
     "readline-sync": "^1.4.9"
