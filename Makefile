@@ -11,6 +11,6 @@ start3:
 start4:
 	npx babel-node -- src/bin/brain-balance.js
 publish:
-	npx publish
+	npm publish
 lint:
 	npx eslint .
