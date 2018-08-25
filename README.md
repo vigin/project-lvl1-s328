@@ -19,6 +19,9 @@ https://asciinema.org/a/BV7oHrztDTBEBilVYuaQkhwQv
 brain-balance
 https://asciinema.org/a/MxzNWf8vVFfE58WBCh9NLcjNP
 
+brain-progression
+https://asciinema.org/a/1RT4TCFzbfcSGBwjgzdjfTOrL
+
 ## Setup
 
 ```sh
