@@ -23,7 +23,7 @@ brain-progression
 https://asciinema.org/a/1RT4TCFzbfcSGBwjgzdjfTOrL
 
 brain-prime
-https://asciinema.org/a/
+https://asciinema.org/a/zUiCGDhegcdsJ1trhRlVTOnZ5
 
 ## Setup
 
