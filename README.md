@@ -22,6 +22,9 @@ https://asciinema.org/a/MxzNWf8vVFfE58WBCh9NLcjNP
 brain-progression
 https://asciinema.org/a/1RT4TCFzbfcSGBwjgzdjfTOrL
 
+brain-prime
+https://asciinema.org/a/
+
 ## Setup
 
 ```sh
