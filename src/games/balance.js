@@ -17,7 +17,7 @@ const getBalance = (a) => {
   return r;
 };
 
-const description = 'Balance the given number.\n';
+const description = 'Balance the given number.';
 
 const gameData = () => {
   const number = getRandomNum(1, 9999);

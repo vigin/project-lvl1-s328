@@ -6,6 +6,7 @@ const rounds = 3;
 export const playRoundGame = (rules, gameData) => {
   console.log('Welcome to the Brain Games!');
   console.log(rules);
+  console.log(); // пустая строка после описания
   const gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
   for (let attempt = 0; attempt < rounds; attempt += 1) {
