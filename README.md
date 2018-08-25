@@ -20,7 +20,7 @@ brain-balance
 https://asciinema.org/a/MxzNWf8vVFfE58WBCh9NLcjNP
 
 brain-progression
-https://asciinema.org/a/1RT4TCFzbfcSGBwjgzdjfTOrL
+https://asciinema.org/a/ehzOKXRmtd7jLSNHN47w8Juea
 
 brain-prime
 https://asciinema.org/a/zUiCGDhegcdsJ1trhRlVTOnZ5
