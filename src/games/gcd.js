@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import getRandomNum from '../common';
-import playRound from '../gametemplate';
+import playGame from '../gametemplate';
 
 const getGcd = (a, b) => {
   let r = 0;
@@ -24,4 +24,4 @@ const gameData = () => {
   return cons(question, rightAnswer.toString());
 };
 
-export default () => playRound(description, gameData);
+export default () => playGame(description, gameData);

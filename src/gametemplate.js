@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 
 const rounds = 3;
 
-export const playRoundGame = (rules, gameData) => {
+export const playBrainGame = (rules, gameData) => {
   console.log('Welcome to the Brain Games!');
   console.log(rules);
   console.log(); // пустая строка после описания
@@ -27,4 +27,4 @@ export const playRoundGame = (rules, gameData) => {
   console.log(`Congratulations, ${gamerName}!`);
 };
 
-export default playRoundGame;
+export default playBrainGame;

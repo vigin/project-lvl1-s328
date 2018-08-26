@@ -1,6 +1,6 @@
 {
   "name": "prj001-bg",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "description": "first project",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",

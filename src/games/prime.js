@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import getRandomNum from '../common';
-import playRound from '../gametemplate';
+import playGame from '../gametemplate';
 
 const isPrime = (num) => {
   if (num < 2) return false;
@@ -21,4 +21,4 @@ const gameData = () => {
   return cons(question, rightAnswer);
 };
 
-export default () => playRound(description, gameData);
+export default () => playGame(description, gameData);
